@@ -1,0 +1,182 @@
+
+[{
+  "id" : "1",
+  "question" : "ชื่อของ champion ตัวใดสะกดผิด ?",
+  "one" : "1. Zoe",
+  "two" : "2. Soraka",
+  "three" : "3. Heimerdinger",
+  "four" : "4. Yasuou",
+  "answer" : "4"
+ },
+ {
+  "id" : "2",
+  "question" : "Rank Flex ไม่สามารถเล่นได้เมื่อมีผู้เล่นกี่คน ?",
+  "one" : "1. 3 คน",
+  "two" : "2. 4 คน.",
+  "three" : "3. 2 คน ",
+  "four" : "4. 1 คน.",
+  "answer" : "2"
+ },
+ {
+  "id" : "3",
+  "question" : "Rank ไหนสูงที่สุด ?",
+  "one" : "1. Master",
+  "two" : "2. Diamond",
+  "three" : "3. Challenger",
+  "four" : "4. Platinum",
+  "answer" : "3"
+ },
+ {
+  "id" : "4",
+  "question" : "Champion คนนี้สังกัดนครรัฐใด ?",
+  "one" : "1. Ionia",
+  "two" : "2. Noxus",
+  "three" : "3. Demacia",
+  "four" : "4. Freljord",
+  "answer" : "3"
+ },
+ {
+  "id" : "5",
+  "question" : "ฉายา The Blood Hunter เป็นฉายาของ champion ตัวใด ?",
+  "one" : "1. Warwick",
+  "two" : "2. Shaco",
+  "three" : "3. Noctune",
+  "four" : "4. Khazix",
+  "answer" : "1"
+ },
+ {
+  "id" : "6",
+  "question" : "Champion ตัวใดมาจากมิติ The void โดยตรง ?",
+  "one" : "1. Malzahar",
+  "two" : "2. Vel'koz",
+  "three" : "3. Kassadin",
+  "four" : "4. Jax",
+  "answer" : "2"
+ },
+ {
+  "id" : "7",
+  "question" : "Caitlyn ใช้อะไรใส่ในกับดัก ?",
+  "one" : "1. ไม่มี",
+  "two" : "2. คัพเค้ก",
+  "three" : "3. เชอร์รี่",
+  "four" : "4. พาย",
+  "answer" : "2"
+ },
+ {
+  "id" : "8",
+  "question" : "เพื่อนเพียงคนเดียวของ Amumu คือใคร ?",
+  "one" : "1. Teemo ",
+  "two" : "2. Poppy",
+  "three" : "3. Karthus",
+  "four" : "4. Annie",
+  "answer" : "4"
+ },
+ {
+  "id" : "9",
+  "question" : "Champion ตัวใดออกรองเท้าไม่ได้ ?",
+  "one" : "1. Nami",
+  "two" : "2. Sivir",
+  "three" : "3. Rammus",
+  "four" : "4. Cassiopeia",
+  "answer" : "4"
+ },
+ {
+  "id" : "10",
+  "question" : "ชื่อสกิล R ของ Ekko คือ?",
+  "one" : "1. Rewind",
+  "two" : "2. Chronoshift",
+  "three" : "3. Chronobreak",
+  "four" : "4. Phase Drive",
+  "answer" : "3"
+ },
+ {
+  "id" : "11",
+  "question" : "ชื่อของ champion ตัวใดสะกดผิด ?",
+  "one" : "1. Zoe",
+  "two" : "2. Soraka",
+  "three" : "3. Heimerdinger",
+  "four" : "4. Yasuou",
+  "answer" : "4"
+ },
+ {
+  "id" : "12",
+  "question" : "Champion ตัวใดไม่มีสกิน Star Guardian",
+  "one" : "1. Ezreal",
+  "two" : "2. Urgot",
+  "three" : "3. Soraka",
+  "four" : "4. Janna",
+  "answer" : "2"
+ },
+ {
+  "id" : "13",
+  "question" : "สัตว์เลี้ยงของ Ivern ชื่ออะไร ?",
+  "one" : "1. Daisy",
+  "two" : "2. Timber",
+  "three" : "3. Meep",
+  "four" : "4. Pixie",
+  "answer" : "1"
+ },
+ {
+  "id" : "14",
+  "question" : "ตัวละครนี้ชื่ออะไร ?",
+  "one" : "1. Yorick",
+  "two" : "2. Warwick",
+  "three" : "3. Vi",
+  "four" : "4. Zac",
+  "answer" : "1"
+ },
+ {
+  "id" : "15",
+  "question" : "Garen เป็นพี่ของใคร ?",
+  "one" : "1. Lux",
+  "two" : "2. Vaynn",
+  "three" : "3. Galio",
+  "four" : "4. Xin Zhao",
+  "answer" : "1"
+ },
+ {
+  "id" : "16",
+  "question" : "Champion ใดเป็นใบ้?",
+  "one" : "1. Cho'Gath",
+  "two" : "2. Sona",
+  "three" : "3. Sion",
+  "four" : "4. Blitzcrank",
+  "answer" : "2"
+ },
+ {
+  "id" : "17",
+  "question" : "Champion ใดแปลงร่างได้ ?",
+  "one" : "1. Gnar",
+  "two" : "2. Soraka",
+  "three" : "3. Lulu",
+  "four" : "4 Udyr",
+  "answer" : "1"
+ },
+ {
+  "id" : "18",
+  "question" : "ใครได้ฉายาว่ามะเร็ง ?",
+  "one" : "1. Yasuo",
+  "two" : "2. Rengar",
+  "three" : "3. Katarina",
+  "four" : "4. Teemo",
+  "answer" : "1"
+ },
+ {
+  "id" : "19",
+  "question" : "Champion ตัวใดเป็นคนพูดประโยค'Yup, that tasted purple.' ?",
+  "one" : "1. Zoe",
+  "two" : "2. Soraka",
+  "three" : "3. Lulu",
+  "four" : "4. Teemo",
+  "answer" : "3"
+ },
+ {
+  "id" : "20",
+  "question" : "Headshot ของ Caitlyn ต้องเก็บกี่ stack ?",
+  "one" : "1. 5",
+  "two" : "2. 4",
+  "three" : "3. 3",
+  "four" : "4. 2",
+  "answer" : "1"
+ }
+]

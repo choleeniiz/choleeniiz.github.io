@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Prompt" rel="stylesheet">
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style>
+body{
+	
+	background-color:#000;
+	font-family: 'Prompt', sans-serif;
+	}
+.content{
+	background-color:white;
+	padding: 20px;
+	
+	}
+p {
+	margin: 40 px;
+	font-size:36px;}
+
+button{
+	font-size: 28px;
+	font-family: 'Prompt', sans-serif;
+	border-radius: 3px;
+	background-color: #555555;
+	color: white;	
+	border: none;
+	width: 60%;
+	}
+
+#t{
+  color: red;
+}
+
+#question{
+  font-size: 30px;
+}
+#image{
+  width: 400px;
+  height: 200px;
+}
+
+</style>
+</head>
+
+<body>
+<center><img  src="http://lh5.ggpht.com/nBAX5GjZC6Ysna09TV7xIQnrlH1SbN0OngjQOC6fGv9l7lbjopKgoLfQ49gHAc514w=w300"></center>
+<div class="content">
+  <p id="topic">เลือกจำนวนคำถาม</p>
+  
+  <div class="game-content">
+  <table width="60%" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td><button id="twenty" onclick="startQuiz(20)">20 คำถาม</button></td>
+    <td><button id="ten" onclick="startQuiz(10)">10 คำถาม</button>
+</td>
+  </tr>
+</table>
+
+  </div>
+<table width="50%" border="0" cellspacing="10" cellpadding="10" align="center" callspacing="20">
+    <td><p id="t">Time:</p></td>
+    <td><p id="timer">10 second/question</p></td>
+</table>
+
+<div id="scores">
+  <p>สกอร์ที่ได้: </p>
+  <p id="total"></p>
+</div>
+
+<p id="question">TEST</p>
+<img id="image" src=""></img>
+
+
+
+  <table width="80%" border="0" cellspacing="10" cellpadding="10" align="center" callspacing="20">
+		<tr>
+      <td> <button id="one">A</button></td>
+      <td><button id="two">B</button></td>
+    </tr>
+    <tr>
+      <td><button id="three">C</button></td>
+      <td><button id="four">D</button></td>
+    </tr>
+  </table>
+  </div>
+  </div>
+  <script src="jquery-3.3.1.js"></script>
+  
+
+		
+	<script>
+  	var data = [];
+    var arrayquiz = [];
+    var score = 0;
+    var count = 0; 
+    var interval;
+    var n;
+    $(document).ready(function(){
+       $.ajax({
+        url: 'data.json',
+        method: 'GET',
+        dataType:'json',
+        success: function(response) {
+        	for (let i = 0; i < response.length; i++){
+            data[i] = response[i];
+       	 	}
+      	}
+      });
+			start();
+    });
+			
+   
+
+		$("#one").click(function(){
+      check(n,"1");
+    })
+    $("#two").click(function(){
+      check(n,"2");
+    })
+    $("#three").click(function(){
+      check(n,"3");
+    })
+    $("#four").click(function(){
+      check(n,"4");
+    })
+			 
+		function start() {
+			$("#one").hide();
+			$("#two").hide();
+			$("#three").hide();
+			$("#four").hide();
+			$("#question").hide();
+			$("#image").hide();
+      $("#time").hide();
+      $("#scores").hide();
+		}
+			    
+		function startQuiz(quiznum) {
+    	$("#twenty").hide();
+			$("#ten").hide();
+			$("#topic").hide();
+			$("#one").show();
+			$("#two").show();
+			$("#three").show();
+			$("#four").show();
+			$("#question").show();
+      $("#time").show();
+			randomQuiz(quiznum);
+			n = arrayquiz.pop();
+      n--;
+			showquestion(n);
+			count++;
+		}
+		
+		function showquestion(n){
+      $("#image").hide();
+      $("#question").html(data[n].question);
+      $("#one").html(data[n].one);
+      $("#two").html(data[n].two);
+      $("#three").html(data[n].three);
+      $("#four").html(data[n].four);
+      time();
+      if (n == 13){
+        $("#image").attr("src","https://vignette.wikia.nocookie.net/leagueoflegends/images/d/d3/Yorick_OriginalSkin.jpg/revision/latest?cb=20160823190124");
+        $("#image").show();
+      }
+      if (n == 15){
+        $("#image").attr("src","https://news-a.akamaihd.net/public/images/srew/img/Sona_Splash.jpg");
+        $("#image").show();
+      }    
+    }
+
+		function next(){
+      clearInterval(interval);
+      if (arrayquiz.length === 0){
+        end();
+      }
+      else{
+        n = arrayquiz.pop();
+        n--;
+        console.log("n=",n);
+        showquestion(n);
+        count++;
+        // $("#num").html(count);
+      }
+		}
+
+		function end(){
+      start();
+      $("#scores").show();
+      $("#t").hide();
+      $("#timer").hide();
+      $("#total").html(score);
+    }
+
+		function check(n,ans){
+    	if (ans === data[n].answer){
+        score++;
+      	// $("#score").html(score);
+    	}
+      next();      
+    }
+
+		function randomQuiz(total) {
+      var count = 0;
+      while (count < total) {
+        var ran = Math.floor(Math.random() * 20)+1;
+        if (arrayquiz.indexOf(ran) === -1){
+          console.log(ran);
+          arrayquiz.push(ran);
+          count++;
+        }
+      }
+    }
+		function time(){
+      var seconds = 10,second = 0;
+      interval = setInterval(function() {
+      	$("#timer").html(seconds-second);
+      	if (second >= seconds) {
+        	next();
+      	}
+        second++;
+      }, 1000);
+    }
+	</script>                                    
+</body>
+</html>
